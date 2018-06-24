@@ -5,22 +5,25 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity(name = "people")
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private String lastname;
-    private char gender;
+    private String gender;
     private String ipAdress;
 
-    public Person(int id, String name, String lastname, char gender, String ipAdress) {
-        this.id = id;
+    public Person(String name, String lastname, String gender, String ipAdress) {
         this.name = name;
         this.lastname = lastname;
         this.gender = gender;
         this.ipAdress = ipAdress;
+    }
+
+    public Person(){
+
     }
 
     public int getId() {
@@ -47,11 +50,11 @@ public class Person {
         this.lastname = lastname;
     }
 
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 

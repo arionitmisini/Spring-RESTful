@@ -40,7 +40,7 @@ public class PersonServiceImpl implements PersonService {
         if( updatedPerson.getLastname() != null) {
             person.setLastname(updatedPerson.getLastname());
         }
-        if( updatedPerson.getGender() != ' ') {
+        if( updatedPerson.getGender() != null) {
             person.setGender(updatedPerson.getGender());
         }
         if( updatedPerson.getIpAdress() != null) {
