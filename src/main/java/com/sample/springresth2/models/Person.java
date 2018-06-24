@@ -1,18 +1,19 @@
 package com.sample.springresth2.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity(name = "people")
+@Entity
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "lastname")
     private String lastname;
+    @Column(name = "gender")
     private String gender;
+    @Column(name = "ip_adress")
     private String ipAdress;
 
     public Person(String name, String lastname, String gender, String ipAdress) {
@@ -22,15 +23,15 @@ public class Person {
         this.ipAdress = ipAdress;
     }
 
-    public Person(){
+    public Person() {
 
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
