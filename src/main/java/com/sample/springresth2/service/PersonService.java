@@ -9,7 +9,7 @@ public interface PersonService {
 
     void create(Person person);
 
-    void readById(int id);
+    void readById(long id);
 
     Person findByIdAndUpdate(long id, Person updatedPerson);
 
