@@ -7,9 +7,9 @@ import java.util.List;
 public interface PersonService {
     Iterable<Person> list();
 
-    void create(Person person);
+    Person create(Person person);
 
-    void readById(long id);
+    Person readById(long id);
 
     Person findByIdAndUpdate(long id, Person updatedPerson);
 

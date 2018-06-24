@@ -21,13 +21,13 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public void create(Person person) {
-        personRepository.save(person);
+    public Person create(Person person) {
+        return personRepository.save(person);
     }
 
     @Override
-    public void readById(long id) {
-        personRepository.findById(id);
+    public Person readById(long id) {
+       return personRepository.getOne(id);
     }
 
     @Override
