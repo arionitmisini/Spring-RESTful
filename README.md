@@ -67,7 +67,7 @@ https://github.com/arionitmisini/Spring-RESTful.git
             "id": 1,
             "name": "Keeley",
             "lastname": "Boscko",
-            "gender":"female"
+            "gender":"female",
             "ipAdress": "192.168.22.43"
             
        }, {...}]
@@ -97,7 +97,7 @@ Returns json of a specific Person data based on its id
      **Content:** 
       
      ```json
-    {
+      {
             "id": 1,
             "name": "Keeley",
             "lastname": "Boscko",
@@ -105,7 +105,7 @@ Returns json of a specific Person data based on its id
             "ipAdress": "192.168.22.43"
             
        }
-      ```
+       ```
 
 ### Create Person
 
