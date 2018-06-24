@@ -6,33 +6,33 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/person")
 public class PersonController {
 
     @Autowired
     PersonService personService;
 
-    @GetMapping("/person")
+    @GetMapping
     public Iterable<Person> list() {
         return personService.list();
     }
 
-    @PostMapping("/")
+    @PostMapping
     public Person create(@RequestBody Person person) {
         return personService.create(person);
     }
 
-    @GetMapping("/person/{id}")
+    @GetMapping("/{id}")
     public Person read(@PathVariable long id) {
         return personService.readById(id);
     }
 
-    @PutMapping("/person/{id}")
+    @PutMapping("/{id}")
     public Person findByIdAndUpdate(@PathVariable long id, @RequestBody Person updatedPerson) {
         return personService.findByIdAndUpdate(id, updatedPerson);
     }
 
-    @DeleteMapping("/person/{id}")
+    @DeleteMapping("/{id}")
     public String delete(@PathVariable long id) {
         personService.deleteById(id);
         return "{\"message\": Person successfully deleted!}";
