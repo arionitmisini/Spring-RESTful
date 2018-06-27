@@ -50,7 +50,7 @@ https://github.com/arionitmisini/Spring-RESTful.git
  
  * **URL**
  
-    /people/
+    /person/
     
  * **Method:**
     
