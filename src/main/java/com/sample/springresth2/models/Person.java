@@ -23,7 +23,7 @@ public class Person {
         this.ipAdress = ipAdress;
     }
 
-    public Person() {
+    public Person(){
 
     }
 
